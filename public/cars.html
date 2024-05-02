@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-py-10">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binar: Challenge 04</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="px-8 py-6 w-full fixed z-50 backdrop-blur-lg bg-white/50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="w-[100px] h-[36px] bg-[#0d28a6]"></div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="block md:hidden text-dark focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 5h18v1H3V5zm0 7h18v1H3v-1zm0 7h18v1H3v-1z"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex md:items-center space-x-8">
+          <a
+            href="#our"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Our Service</a
+          >
+          <a
+            href="#why-us"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Why Us</a
+          >
+          <a
+            href="#testimonial"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Testimonial</a
+          >
+          <a
+            href="#faq"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >FAQ</a
+          >
+          <a href="#">
+            <button
+              class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out"
+            >
+              Register
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div
+        class="pt-8 md:hidden bg-[#f1f3ff] w-[50%] h-[100vh] absolute top-0 -right-96 px-8 border-2 shadow-2xl transition-all duration-500 ease-in-out"
+        id="mobile-menu"
+      >
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold">BCR</h2>
+          <button class="relative hover:cursor-pointer" id="menu-button-x">
+            <div
+              class="w-6 h-[2px] bg-black rotate-45 absolute top-0 right-0"
+            ></div>
+            <div
+              class="w-6 h-[2px] bg-black -rotate-45 absolute top-0 right-0"
+            ></div>
+          </button>
+        </div>
+        <div class="pt-5 pb-4 space-y-6">
+          <div>
+            <a
+              href="#our"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Our Service</a
+            >
+          </div>
+          <div>
+            <a
+              href="#why-us"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Why Us</a
+            >
+          </div>
+          <div>
+            <a
+              href="#testimonial"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Testimonial</a
+            >
+          </div>
+          <div>
+            <a
+              href="#faq"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >FAQ</a
+            >
+          </div>
+          <div>
+            <a href="#" class="block">
+              <button
+                class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm w-full hover:bg-[#0a800e] transition duration-300 ease-in-out"
+              >
+                Register
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <section id="main-content" class="transition-all duration-500 ease-in-out">
+      <section id="main" class="bg-[#f1f3ff] py-12 pt-44">
+        <!-- Main Content -->
+        <div
+          class="container-fluid mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-8 md:pr-0"
+        >
+          <div class="w-[95%] md-w-full flex flex-col">
+            <h1
+              class="text-4xl font-bold text-start md:text-left leading-relaxed md:leading-relaxed font-['Helvetica Neue']"
+            >
+              Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+            </h1>
+            <p class="font-light text-sm text-slate-700 mt-4 md:w-[70%] w-full">
+              Selamat datang di Binar Car Rental. Kami menyediakan mobil
+              kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+              kebutuhanmu untuk sewa mobil selama 24 jam.
+            </p>
+            <div class="mt-8">
+              <button
+                class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out w-auto"
+              >
+                Mulai Sewa Mobil
+              </button>
+            </div>
+          </div>
+          <div class="w-full mt-12 md:mt-0">
+            <img
+              src="./images/car-main.png"
+              alt="Illustration"
+              class="w-full"
+            />
+          </div>
+        </div>
+
+        <!-- End Main Content -->
+      </section>
+      <!-- END Section Main -->
+      <section id="banner-main" class="container-fluid md:relative">
+        <div
+          class="container bg-white mx-auto md:absolute md:left-[100px] lg:left-8 md:top-[-60px] lg:top-[-130px] border-2 border-black rounded-md shadow-lg md:py-4"
+        >
+          <div class="flex flex-col md:flex-row p-4 gap-2 items-end">
+            <div class="w-full md:w-3/12">
+              <label class="block text-sm font-medium leading-6 text-gray-900"
+                >Tipe Drive</label
+              >
+              <div class="mt-2">
+                <select
+                  id="tipeDriver"
+                  name="tipeDriver"
+                  autocomplete="tipeDriver"
+                  class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                >
+                  <option disabled selected class="text-gray-400 p-2">
+                    Pilih Tipe Drive
+                  </option>
+                  <option value="true">Dengan supir</option>
+                  <option value="false">Tanpa supir (Lepas kunci)</option>
+                </select>
+              </div>
+            </div>
+            <div class="w-full md:w-3/12">
+              <label class="block text-sm font-medium leading-6 text-gray-900"
+                >Tanggal</label
+              >
+              <div class="mt-2">
+                <input
+                  type="date"
+                  name="date"
+                  id="tanggal"
+                  class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-3/12">
+              <label class="block text-sm font-medium leading-6 text-gray-900"
+                >Pilih Waktu</label
+              >
+              <div class="mt-2">
+                <select
+                  id="waktuJemput"
+                  name="waktuJemput"
+                  autocomplete="waktuJemput"
+                  class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                >
+                  <option disabled selected class="text-gray-400 p-2">
+                    Pilih Waktu
+                  </option>
+                  <option value="08:00">08:00 WIB</option>
+                  <option value="09:00">09:00 WIB</option>
+                  <option value="10:00">10:00 WIB</option>
+                  <option value="11:00">11:00 WIB</option>
+                  <option value="12:00">12:00 WIB</option>
+                </select>
+              </div>
+            </div>
+            <div class="w-full md:w-3/12">
+              <label
+                for="country"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Jumlah Penumpang (Optional)</label
+              >
+              <div class="mt-2">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  placeholder="Jumlah Penumpang"
+                />
+              </div>
+            </div>
+            <div class="w-full md:w-2/12">
+              <button
+                id="load-btn"
+                class="bg-[#5cb85f] text-white py-1.5 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out w-auto"
+              >
+                Cari Mobil
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- end search mobil -->
+
+      <section id="main-car mt-12">
+        <div
+          class="container flex flex-wrap justify-center items-center mx-auto border-2 border-red-500"
+          id="cars-container"
+        ></div>
+      </section>
+
+      <!-- End Section Footer -->
+    </section>
+    <!-- <button id="load-btn">Load</button> -->
+    <!-- <button id="clear-btn">Clear</button> -->
+    <!-- <div id="cars-container"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+
+    <!-- Example Javascript -->
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+    <script>
+      // Mendapatkan elemen menu mobile dan tombol menu
+      const menu = document.getElementById("mobile-menu");
+      const button = document.getElementById("mobile-menu-button");
+      const closeButton = document.getElementById("menu-button-x");
+      const mainContent = document.getElementById("main-content");
+
+      // Fungsi untuk menutup menu
+      function closeMenu() {
+        menu.classList.remove("right-0");
+        menu.classList.add("-right-96");
+        mainContent.classList.remove("brightness-50");
+      }
+
+      // Menggunakan event listener untuk tombol menu
+      button.addEventListener("click", () => {
+        menu.classList.remove("-right-96");
+        menu.classList.add("right-0");
+        mainContent.classList.add("brightness-50");
+      });
+
+      // Menggunakan event listener untuk tombol tutup
+      closeButton.addEventListener("click", closeMenu);
+
+      // Menggunakan event listener pada dokumen untuk menutup menu saat klik di luar area menu
+      document.addEventListener("click", (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideButton = button.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton) {
+          closeMenu();
+        }
+      });
+
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Tampilkan elemen jika masuk viewport
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          } else {
+            // Sembunyikan kembali elemen jika keluar viewport
+            entry.target.style.opacity = "0";
+            entry.target.style.transform = "translateY(20px)"; // Ubah sesuai dengan transform yang awal
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5,
+      });
+
+      const ourSection = document.querySelector("#our");
+      // const whyUs = document.querySelector("#why-us");
+      const testimonial = document.querySelector("#testimonial");
+      const faq = document.querySelector("#faq");
+
+      if (ourSection) {
+        // Mulai mengamati elemen ourSection
+        observer.observe(ourSection);
+      }
+
+      // if (whyUs) {
+      //   // Mulai mengamati elemen whyUs
+      //   observer.observe(whyUs);
+      // }
+
+      if (testimonial) {
+        // Mulai mengamati elemen testimonial
+        observer.observe(testimonial);
+      }
+
+      if (faq) {
+        // Mulai mengamati elemen faq
+        observer.observe(faq);
+      }
+    </script>
+  </body>
+</html>

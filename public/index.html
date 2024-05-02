@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-py-10">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binar: Challenge 04</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="px-8 py-6 w-full fixed z-50 backdrop-blur-lg bg-white/50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="w-[100px] h-[36px] bg-[#0d28a6]"></div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="block md:hidden text-dark focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg class="h-8 w-8 fill-current" viewBox="0 0 24 24">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3 5h18v1H3V5zm0 7h18v1H3v-1zm0 7h18v1H3v-1z"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex md:items-center space-x-8">
+          <a
+            href="#our"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Our Service</a
+          >
+          <a
+            href="#why-us"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Why Us</a
+          >
+          <a
+            href="#testimonial"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >Testimonial</a
+          >
+          <a
+            href="#faq"
+            class="text-dark relative before:content-[''] before:w-full before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-50"
+            >FAQ</a
+          >
+          <a href="#">
+            <button
+              class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out"
+            >
+              Register
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div
+        class="pt-8 md:hidden bg-[#f1f3ff] w-[50%] h-[100vh] absolute top-0 -right-96 px-8 border-2 shadow-2xl transition-all duration-500 ease-in-out"
+        id="mobile-menu"
+      >
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold">BCR</h2>
+          <button class="relative hover:cursor-pointer" id="menu-button-x">
+            <div
+              class="w-6 h-[2px] bg-black rotate-45 absolute top-0 right-0"
+            ></div>
+            <div
+              class="w-6 h-[2px] bg-black -rotate-45 absolute top-0 right-0"
+            ></div>
+          </button>
+        </div>
+        <div class="pt-5 pb-4 space-y-6">
+          <div>
+            <a
+              href="#our"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Our Service</a
+            >
+          </div>
+          <div>
+            <a
+              href="#why-us"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Why Us</a
+            >
+          </div>
+          <div>
+            <a
+              href="#testimonial"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >Testimonial</a
+            >
+          </div>
+          <div>
+            <a
+              href="#faq"
+              class="text-dark relative before:content-[''] before:absolute before:w-full before:h-[2px] before:bg-[#5cb85f] before:-bottom-2 before:transform before:origin-center before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:scale-x-100"
+              >FAQ</a
+            >
+          </div>
+          <div>
+            <a href="#" class="block">
+              <button
+                class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm w-full hover:bg-[#0a800e] transition duration-300 ease-in-out"
+              >
+                Register
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <section id="main-content" class="transition-all duration-500 ease-in-out">
+      <section id="main" class="bg-[#f1f3ff] py-12 pt-44">
+        <!-- Main Content -->
+        <div
+          class="container-fluid mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-8 md:pr-0"
+        >
+          <div class="w-[95%] md-w-full flex flex-col">
+            <h1
+              class="text-4xl font-bold text-start md:text-left leading-relaxed md:leading-relaxed font-['Helvetica Neue']"
+            >
+              Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+            </h1>
+            <p class="font-light text-sm text-slate-700 mt-4 md:w-[70%] w-full">
+              Selamat datang di Binar Car Rental. Kami menyediakan mobil
+              kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+              kebutuhanmu untuk sewa mobil selama 24 jam.
+            </p>
+            <div class="mt-8">
+              <a
+                href="cars.html"
+                class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out w-auto"
+              >
+                Mulai Sewa Mobil
+              </a>
+            </div>
+          </div>
+          <div class="w-full mt-12 md:mt-0">
+            <img
+              src="./images/car-main.png"
+              alt="Illustration"
+              class="w-full"
+            />
+          </div>
+        </div>
+
+        <!-- End Main Content -->
+      </section>
+      <!-- END Section Main -->
+
+      <!-- Section Our -->
+      <section id="our" class="bg-[#f1f3ff] pt8 sm:py-12">
+        <div
+          class="container mx-auto flex flex-col md:flex-row items-center justify-center p-4 lg:p-0 sm:p-0"
+        >
+          <div class="w-full">
+            <img
+              src="./images/our-image.png"
+              alt="Illustration"
+              class="w-[80%] md:w-[60%] mx-auto"
+            />
+          </div>
+          <div
+            class="w-full flex flex-col justify-center items-center md:items-start mt-8 md:mt-0"
+          >
+            <h2
+              class="text-2xl font-bold text-start md:text-left leading-relaxed md:leading-relaxed font-['Helvetica Neue'] w-full md:w-[80%]"
+            >
+              Best Car Rental for any kind of trip in (Lokasimu)!
+            </h2>
+            <p class="font-light text-sm text-slate-700 w-full md:w-[75%] mt-4">
+              Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga
+              lebih murah dibandingkan yang lain, kondisi mobil baru, serta
+              kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
+              wedding, meeting, dll.
+            </p>
+            <div class="space-y-5 mt-4 w-full">
+              <div class="flex items-center justify-start gap-4">
+                <img src="./images/our-icon.png" alt="" class="w-[25px]" />
+                <p class="text-sm font-light text-slate-700 w-full">
+                  Sewa Mobil Dengan Supir di Bali 12 Jam
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="./images/our-icon.png" alt="" class="w-[25px]" />
+                <p class="text-sm font-light text-slate-700 w-full">
+                  Sewa Mobil Lepas Kunci di Bali 24 Jam
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="./images/our-icon.png" alt="" class="w-[25px]" />
+                <p class="text-sm font-light text-slate-700 w-full">
+                  Sewa Mobil Jangka Panjang Bulanan
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="./images/our-icon.png" alt="" class="w-[25px]" />
+                <p class="text-sm font-light text-slate-700 w-full">
+                  Gratis Antar - Jemput Mobil di Bandara
+                </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <img src="./images/our-icon.png" alt="" class="w-[25px]" />
+                <p class="text-sm font-light text-slate-700 w-full">
+                  Layanan Airport Transfer / Drop In Out
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Our -->
+
+      <!-- Why Us -->
+      <section id="why-us" class="py-12 bg-[#ffffff]">
+        <div class="container mx-auto space-y-4 p-4 lg:p-0">
+          <h2 class="text-2xl font-bold">Why Us?</h2>
+          <p class="text-sm font-light">
+            Mengapa harus pilih Binar Car Rental?
+          </p>
+          <div class="flex flex-col lg:flex-row gap-8 pt-8">
+            <div
+              class="w-full lg:w-3/12 p-6 px-8 space-y-4 border-2 shadow-md transition-all duration-500 ease-in-out hover:cursor-pointer hover:text-[#000000] hover:scale-110"
+            >
+              <img src="./images/why-icon1.png" alt="icon_1" class="w-[32px]" />
+              <h3 class="text-base font-bold">Mobil Lengkap</h3>
+              <p class="text-sm font-light text-slate-700">
+                Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan
+                terawat
+              </p>
+            </div>
+            <div
+              class="w-full lg:w-3/12 p-6 px-8 space-y-4 border-2 shadow-md transition-all duration-500 ease-in-out hover:cursor-pointer hover:scale-110"
+            >
+              <img src="./images/why-icon2.png" alt="icon_1" class="w-[32px]" />
+              <h3 class="text-base font-bold">Harga Murah</h3>
+              <p class="text-sm font-light text-slate-700">
+                Harga murah dan bersaing, bisa bandingkan harga kami dengan
+                rental mobil lain
+              </p>
+            </div>
+            <div
+              class="w-full lg:w-3/12 p-6 px-8 space-y-4 border-2 shadow-md transition-all duration-500 ease-in-out hover:cursor-pointer hover:scale-110"
+            >
+              <img src="./images/why-icon3.png" alt="icon_1" class="w-[32px]" />
+              <h3 class="text-base font-bold">Layanan 24 Jam</h3>
+              <p class="text-sm font-light text-slate-700">
+                Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga
+                tersedia di akhir minggu
+              </p>
+            </div>
+            <div
+              class="w-full lg:w-3/12 p-6 px-8 space-y-4 border-2 shadow-md transition-all duration-500 ease-in-out hover:cursor-pointer hover:scale-110"
+            >
+              <img src="./images/why-icon4.png" alt="icon_1" class="w-[32px]" />
+              <h3 class="text-base font-bold">Sopir Profesional</h3>
+              <p class="text-sm font-light text-slate-700">
+                Sopir yang profesional, berpengalaman, jujur, ramah dan selalu
+                tepat waktu
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Why Us -->
+
+      <!-- Testimonial -->
+      <section id="testimonial" class="bg-[#f1f3ff] py-12 overflow-hidden">
+        <div class="text-center space-y-4 pb-6">
+          <h2 class="text-2xl font-bold">Testimonial</h2>
+          <p class="text-sm font-light">
+            Berbagai review positif dari para pelanggan kami
+          </p>
+        </div>
+        <div
+          id="controls-carousel"
+          class="w-full md:w-[45%] mx-auto"
+          data-carousel="static"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative overflow-visible md:h-[330px] h-96 rounded-lg">
+            <!-- Item 1 -->
+
+            <div
+              class="hidden duration-700 ease-in-out w-full p-4"
+              data-carousel-item="active"
+            >
+              <div
+                class="flex flex-col space-y-4 md:flex-row justify-center items-center border-2 shadow-lg rounded-lg h-full"
+              >
+                <div class="w-3/12 flex justify-center">
+                  <img
+                    src="./images/slide1.png"
+                    alt="slide1"
+                    width="80"
+                    height="80"
+                    class="rounded-full"
+                  />
+                </div>
+                <div class="w-9/12 space-y-3">
+                  <div class="flex justify-center gap-2 md:block">
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                  </div>
+                  <p class="font-light text-sm text-slate-700">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod”
+                  </p>
+                  <p class="font-medium">Son Goku 32, Bromo</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="hidden duration-700 ease-in-out w-full p-4"
+              data-carousel-item="active"
+            >
+              <div
+                class="flex flex-col space-y-4 md:flex-row justify-center items-center border-2 shadow-lg rounded-lg h-full"
+              >
+                <div class="w-3/12 flex justify-center">
+                  <img
+                    src="./images/testi1.png"
+                    alt="testi1"
+                    width="80"
+                    height="80"
+                  />
+                </div>
+                <div class="w-9/12 space-y-3">
+                  <div class="flex justify-center gap-2 md:block">
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                  </div>
+                  <p class="font-light text-sm text-slate-700">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod”
+                  </p>
+                  <p class="font-medium">John Dee 32, Bromo</p>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="hidden duration-700 ease-in-out w-full p-4"
+              data-carousel-item
+            >
+              <div
+                class="flex flex-col space-y-4 md:flex-row justify-center items-center border-2 shadow-lg rounded-lg h-full"
+              >
+                <div class="w-3/12 flex justify-center">
+                  <img
+                    src="./images/testi2.png"
+                    alt="testi2"
+                    width="80"
+                    height="80"
+                  />
+                </div>
+                <div class="w-9/12 space-y-3">
+                  <div class="flex justify-center gap-2 md:block">
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                  </div>
+                  <p class="font-light text-sm text-slate-700">
+                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod”
+                  </p>
+                  <p class="font-medium">John Dee 32, Bromo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slider controls -->
+          <div class="flex justify-center space-x-3 mt-8">
+            <button type="button" data-carousel-prev>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#5cb85f] hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-left fa-md"></i>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button" data-carousel-next>
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full shadow-lg transition duration-300 ease-in-out hover:bg-[#5cb85f] hover:text-white"
+              >
+                <i class="fa-solid fa-chevron-right fa-md"></i>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonial -->
+
+      <!-- Section Getting Started -->
+      <section id="getting-started" class="py-12 bg-[#ffffff]">
+        <div
+          class="container bg-[#0d28a6] mx-auto flex flex-col items-center gap-8 p-10 py-16 rounded-lg"
+        >
+          <h1 class="text-4xl font-bold text-white text-center">
+            Sewa Mobil di (Lokasimu) Sekarang
+          </h1>
+          <p class="text-white text-center font-light text-sm lg:w-[40%]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button
+            class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out w-auto"
+          >
+            Mulai Sewa Mobil
+          </button>
+        </div>
+      </section>
+      <!-- End Section Getting Started -->
+
+      <!-- Section FAQ -->
+      <section id="faq" class="py-12 bg-[#ffffff]">
+        <div
+          class="container mx-auto flex flex-col lg:flex-row p-4 lg:p-0 space-y-8 lg:space-y-0 lg:space-x-8"
+        >
+          <div class="w-full lg:w-6/12 space-y-4 text-center lg:text-left">
+            <h2 class="text-2xl font-bold">Frequently Asked Question</h2>
+            <p class="text-sm font-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+          </div>
+          <div class="w-full lg:w-6/12 space-y-4">
+            <!-- according 1 -->
+            <div class="relative mb-3 shadow-sm border-2 rounded-md">
+              <p class="mb-0">
+                <button
+                  class="relative flex items-center w-full p-4 font-light text-sm text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 rounded-t-1 group"
+                  data-collapse-target="animated-collapse-1"
+                >
+                  <span>Apa saja syarat yang dibutuhkan?</span>
+                  <i
+                    class="absolute right-4 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+                  ></i>
+                </button>
+              </p>
+              <div
+                data-collapse="animated-collapse-1"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                  We're not always in the position that we want to be at. We're
+                  constantly growing. We're constantly making mistakes. We're
+                  constantly trying to express ourselves and actualize our
+                  dreams.
+                </div>
+              </div>
+            </div>
+            <!-- according 2 -->
+            <div class="relative mb-3 shadow-sm border-2 rounded-md">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full p-4 font-light text-sm text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 rounded-t-1 group"
+                  data-collapse-target="animated-collapse-2"
+                >
+                  <span>Berapa hari minimal sewa mobil lepas kunci?</span>
+                  <i
+                    class="absolute right-4 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+                  ></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-2"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                  We're not always in the position that we want to be at. We're
+                  constantly growing. We're constantly making mistakes. We're
+                  constantly trying to express ourselves and actualize our
+                  dreams.
+                </div>
+              </div>
+            </div>
+            <!-- according 3 -->
+            <div class="relative mb-3 shadow-sm border-2 rounded-md">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full p-4 font-light text-sm text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 rounded-t-1 group"
+                  data-collapse-target="animated-collapse-3"
+                >
+                  <span
+                    >Berapa hari sebelumnya sabaiknya booking sewa mobil?</span
+                  >
+                  <i
+                    class="absolute right-4 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+                  ></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-3"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                  We're not always in the position that we want to be at. We're
+                  constantly growing. We're constantly making mistakes. We're
+                  constantly trying to express ourselves and actualize our
+                  dreams.
+                </div>
+              </div>
+            </div>
+            <!-- according 4 -->
+            <div class="relative mb-3 shadow-sm border-2 rounded-md">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full p-4 font-light text-sm text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 rounded-t-1 group"
+                  data-collapse-target="animated-collapse-4"
+                >
+                  <span>Apakah Ada biaya antar-jemput?</span>
+                  <i
+                    class="absolute right-4 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+                  ></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-4"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                  We're not always in the position that we want to be at. We're
+                  constantly growing. We're constantly making mistakes. We're
+                  constantly trying to express ourselves and actualize our
+                  dreams.
+                </div>
+              </div>
+            </div>
+            <!-- according 5 -->
+            <div class="relative mb-3 shadow-sm border-2 rounded-md">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full p-4 font-light text-sm text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 rounded-t-1 group"
+                  data-collapse-target="animated-collapse-5"
+                >
+                  <span>Bagaimana jika terjadi kecelakaan</span>
+                  <i
+                    class="absolute right-4 pt-1 text-base transition-transform fa fa-chevron-down group-open:rotate-180"
+                  ></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-5"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="p-4 text-sm leading-normal text-blue-gray-500/80">
+                  We're not always in the position that we want to be at. We're
+                  constantly growing. We're constantly making mistakes. We're
+                  constantly trying to express ourselves and actualize our
+                  dreams.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section FAQ -->
+
+      <!-- Section Footer -->
+      <section id="footer" class="py-12 bg-[#ffffff]">
+        <div
+          class="container mx-auto flex flex-col lg:flex-row p-4 lg:p-0 space-y-8 lg:space-y-0 lg:space-x-8 items-start"
+        >
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">
+              Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+            </p>
+            <p class="font-light text-sm">binarcarrental@gmail.com</p>
+            <p class="font-light text-sm">081-233-334-808</p>
+          </div>
+          <div class="w-full lg:w-3/12 flex flex-col space-y-4">
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Our services</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Why Us</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Testimonial</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >FAQ</a
+            >
+          </div>
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">Connect with us</p>
+            <div class="flex flex-row gap-4 flex-wrap">
+              <div>
+                <a href="https://facebook.com">
+                  <i
+                    class="fa-brands fa-facebook fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://instagram.com">
+                  <i
+                    class="fa-brands fa-instagram fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com">
+                  <i
+                    class="fa-brands fa-twitter fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://linkedin.com">
+                  <i
+                    class="fa-solid fa-envelope fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitch.com">
+                  <i
+                    class="fa-brands fa-twitch fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">Copyright Binar 2022</p>
+            <div class="w-[100px] h-[36px] bg-[#0d28a6]"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section Footer -->
+    </section>
+    <!-- <button id="load-btn">Load</button>
+    <button id="clear-btn">Clear</button>
+    <div id="cars-container"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+
+    <!-- Example Javascript -->
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+    <script>
+      // Mendapatkan elemen menu mobile dan tombol menu
+      const menu = document.getElementById("mobile-menu");
+      const button = document.getElementById("mobile-menu-button");
+      const closeButton = document.getElementById("menu-button-x");
+      const mainContent = document.getElementById("main-content");
+
+      // Fungsi untuk menutup menu
+      function closeMenu() {
+        menu.classList.remove("right-0");
+        menu.classList.add("-right-96");
+        mainContent.classList.remove("brightness-50");
+      }
+
+      // Menggunakan event listener untuk tombol menu
+      button.addEventListener("click", () => {
+        menu.classList.remove("-right-96");
+        menu.classList.add("right-0");
+        mainContent.classList.add("brightness-50");
+      });
+
+      // Menggunakan event listener untuk tombol tutup
+      closeButton.addEventListener("click", closeMenu);
+
+      // Menggunakan event listener pada dokumen untuk menutup menu saat klik di luar area menu
+      document.addEventListener("click", (event) => {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideButton = button.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton) {
+          closeMenu();
+        }
+      });
+
+      function handleIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Tampilkan elemen jika masuk viewport
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          } else {
+            // Sembunyikan kembali elemen jika keluar viewport
+            entry.target.style.opacity = "0";
+            entry.target.style.transform = "translateY(20px)"; // Ubah sesuai dengan transform yang awal
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5,
+      });
+
+      const ourSection = document.querySelector("#our");
+      // const whyUs = document.querySelector("#why-us");
+      const testimonial = document.querySelector("#testimonial");
+      const faq = document.querySelector("#faq");
+
+      if (ourSection) {
+        // Mulai mengamati elemen ourSection
+        observer.observe(ourSection);
+      }
+
+      // if (whyUs) {
+      //   // Mulai mengamati elemen whyUs
+      //   observer.observe(whyUs);
+      // }
+
+      if (testimonial) {
+        // Mulai mengamati elemen testimonial
+        observer.observe(testimonial);
+      }
+
+      if (faq) {
+        // Mulai mengamati elemen faq
+        observer.observe(faq);
+      }
+    </script>
+  </body>
+</html>
