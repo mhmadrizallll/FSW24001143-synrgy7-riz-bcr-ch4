@@ -135,7 +135,7 @@
     <!-- End Navbar -->
 
     <section id="main-content" class="transition-all duration-500 ease-in-out">
-      <section id="main" class="bg-[#f1f3ff] py-12 pt-44">
+      <section id="main" class="bg-[#f1f3ff] py-12 pt-24">
         <!-- Main Content -->
         <div
           class="container-fluid mx-auto flex flex-col md:flex-row items-center justify-center p-4 md:p-8 md:pr-0"
@@ -171,13 +171,15 @@
         <!-- End Main Content -->
       </section>
       <!-- END Section Main -->
-      <section id="banner-main" class="container-fluid md:relative">
+      <section id="banner-main" class="container-fluid static md:relative">
         <div
-          class="container bg-white mx-auto md:absolute md:left-[100px] lg:left-8 md:top-[-60px] lg:top-[-130px] border-2 border-black rounded-md shadow-lg md:py-4"
+          class="container bg-[#f1f3ff] mx-auto static md:absolute md:left-[100px] lg:left-8 md:top-[-60px] lg:top-[-130px] rounded-md shadow-xl md:py-4"
         >
           <div class="flex flex-col md:flex-row p-4 gap-2 items-end">
             <div class="w-full md:w-3/12">
-              <label class="block text-sm font-medium leading-6 text-gray-900"
+              <label
+                class="block text-sm font-medium leading-6 text-gray-900"
+                for="tipeDriver"
                 >Tipe Drive</label
               >
               <div class="mt-2">
@@ -196,7 +198,9 @@
               </div>
             </div>
             <div class="w-full md:w-3/12">
-              <label class="block text-sm font-medium leading-6 text-gray-900"
+              <label
+                class="block text-sm font-medium leading-6 text-gray-900"
+                for="tanggal"
                 >Tanggal</label
               >
               <div class="mt-2">
@@ -209,7 +213,9 @@
               </div>
             </div>
             <div class="w-full md:w-3/12">
-              <label class="block text-sm font-medium leading-6 text-gray-900"
+              <label
+                class="block text-sm font-medium leading-6 text-gray-900"
+                for="waktuJemput"
                 >Pilih Waktu</label
               >
               <div class="mt-2">
@@ -232,15 +238,15 @@
             </div>
             <div class="w-full md:w-3/12">
               <label
-                for="country"
+                for="jumlahPenumpang"
                 class="block text-sm font-medium leading-6 text-gray-900"
                 >Jumlah Penumpang (Optional)</label
               >
               <div class="mt-2">
                 <input
                   type="number"
-                  name=""
-                  id=""
+                  name="jumlahPenumpang"
+                  id="jumlahPenumpang"
                   class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                   placeholder="Jumlah Penumpang"
                 />
@@ -260,13 +266,93 @@
 
       <!-- end search mobil -->
 
-      <section id="main-car mt-12">
-        <div
-          class="container flex flex-wrap justify-center items-center mx-auto border-2 border-red-500"
-          id="cars-container"
-        ></div>
+      <section
+        id="main-car"
+        class="container mx-auto rounded-md bg-[#f1f3ff] pt-16"
+      >
+        <div class="flex flex-wrap items-center" id="cars-container"></div>
       </section>
 
+      <!-- Section Footer -->
+      <section id="footer" class="py-12 bg-[#ffffff]">
+        <div
+          class="container mx-auto flex flex-col lg:flex-row p-4 lg:p-0 space-y-8 lg:space-y-0 lg:space-x-8 items-start"
+        >
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">
+              Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000
+            </p>
+            <p class="font-light text-sm">binarcarrental@gmail.com</p>
+            <p class="font-light text-sm">081-233-334-808</p>
+          </div>
+          <div class="w-full lg:w-3/12 flex flex-col space-y-4">
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Our services</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Why Us</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >Testimonial</a
+            >
+            <a
+              href="#"
+              class="text-dark font-medium relative before:content-[''] before:h-[2px] before:bg-[#5cb85f] before:absolute before:-bottom-1 before:transition-all before:duration-500 before:ease-in-out before:w-0 hover:before:w-[20%]"
+              >FAQ</a
+            >
+          </div>
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">Connect with us</p>
+            <div class="flex flex-row gap-4 flex-wrap">
+              <div>
+                <a href="https://facebook.com">
+                  <i
+                    class="fa-brands fa-facebook fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://instagram.com">
+                  <i
+                    class="fa-brands fa-instagram fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitter.com">
+                  <i
+                    class="fa-brands fa-twitter fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://linkedin.com">
+                  <i
+                    class="fa-solid fa-envelope fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+              <div>
+                <a href="https://twitch.com">
+                  <i
+                    class="fa-brands fa-twitch fa-2xl text-[#0d28a6] hover:cursor-pointer hover:text-[#000000]"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-3/12 space-y-4">
+            <p class="font-light text-sm">Copyright Binar 2022</p>
+            <div class="w-[100px] h-[36px] bg-[#0d28a6]"></div>
+          </div>
+        </div>
+      </section>
       <!-- End Section Footer -->
     </section>
     <!-- <button id="load-btn">Load</button> -->

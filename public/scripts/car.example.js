@@ -42,16 +42,24 @@ class Car {
   render() {
     return `
     
-      
+    <div class="p-4 rounded-xl shadow-xl space-y-2">   
         <img
           src="${this.image}"
           alt="${this.manufacture}"
           class="w-full h-[200px] object-cover"
         />
-        <p>${this.manufacture}/${this.model}</p>
-        <p class="text-bold">${this.rentPerDay}</p>
-        <p>${this.description}</p>
-      
+        <p class="text-sm font-normal">${this.manufacture}/${this.model}</p>
+        <p class="text-base font-bold">Rp. ${this.rentPerDay} / Hari</p>
+        <p class="font-light text-sm text-slate-700 w-full car-description">${this.description}</p>
+        <p class="font-light flex items-center gap-3"><i class="fa fa-solid fa-user-group"></i> <span> ${this.capacity} orang </span></p>
+        <p class="font-light flex items-center gap-3"><i class="fa fa-solid fa-gear"></i> <span> ${this.transmission} </span></p>
+        <p class="font-light flex items-center gap-3"><i class="fa fa-solid fa-calendar"></i> <span> tahun ${this.year} </span></p>
+        <button
+                class="bg-[#5cb85f] text-white py-2 px-4 rounded-sm hover:bg-[#0a800e] transition duration-300 ease-in-out w-full"
+              >
+                Pilih Mobil
+              </button>
+      </div>
     
     `;
   }

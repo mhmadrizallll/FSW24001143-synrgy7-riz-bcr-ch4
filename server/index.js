@@ -1,43 +1,46 @@
-// console.log("Implement servermu disini yak 😝!");
+// console.log("Implement servermu disini yak 😝
 
-const http = require("http");
 const fs = require("fs");
+const http = require("http");
 const path = require("path");
 const url = require("url");
-const PUBLIC_DIRECTORY = path.join(__dirname, "../public");
-const PORT = 8000;
 
-const server = (req, res) => {
+const PUBLIC_DIR = path.join(__dirname, "../public");
+const port = 8000;
+
+const onRequest = (req, res) => {
   if (req.url === "/") {
     req.url = "/index.html";
   } else if (req.url === "/cars") {
     req.url = "/cars.html";
-  } else {
-    req.url = req.url;
   }
-  const parseURL = url.parse(req.url);
-  const pathName = `${parseURL.pathname}`;
-  const extension = path.parse(pathName).ext;
-  const absolutePath = path.join(PUBLIC_DIRECTORY, pathName);
+  const parsedUrl = url.parse(req.url);
+  const pathname = `${parsedUrl.pathname}`;
+  const extension = path.parse(pathname).ext;
+  const dirPath = path.join(PUBLIC_DIR, pathname);
+  // console.log(dirPath);
 
   const contentTypes = {
-    ".css": "text/css",
-    ".png": "image/png",
-    ".svg": "image/svg+xml",
     ".html": "text/html",
+    ".css": "text/css",
     ".js": "text/javascript",
+    ".png": "image/png",
+    ".jpg": "image/jpg",
   };
 
-  fs.readFile(absolutePath, (err, data) => {
+  fs.readFile(dirPath, (err, content) => {
     if (err) {
-      res.statusCode = 500;
-      res.end("File not found ...");
-    } else {
-      res.setHeader("Content-Type", contentTypes[extension] || "text/plain");
-      res.end(data);
+      res.writeHead(404);
+      res.end(JSON.stringify(err));
+      return;
     }
+    const contentType = contentTypes[extension];
+    res.writeHead(200, { "Content-Type": contentType });
+    res.end(content);
   });
 };
 
-http.createServer(server).listen(PORT);
-console.log(`Server is running ... PORT : http://localhost:${PORT}`);
+const server = http.createServer(onRequest);
+server.listen(port, "localhost", () => {
+  console.log(`Server listening on http://localhost:${port}`);
+});
